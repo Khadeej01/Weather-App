@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Weather App</title>   
+  <script src="https://cdn.tailwindcss.com"></script>  
 </head>
+
 <body class="bg-[url('Pictures/skyscape-5510113_1280.jpg')] bg-cover bg-center text-white font-sans">
   <div class="p-6">
-    
+
     <!-- Barre de recherche -->
     <div class="flex justify-center mb-6">
-      <input
-        type="text"
-        placeholder="City search..."
-        class="px-4 py-2 w-full max-w-md rounded-full bg-white text-black focus:outline-none shadow-md"
-      />
+      <div class="search w-3xs flex items-center justify-center pr-15 ">
+        <input type="text" id="searchInput" placeholder="City search..."
+          class="px-4 py-2 w-full max-w-md rounded-full bg-white text-black focus:outline-none shadow-md" />
+          <button id="searchBtn" class="w-5 h-5 ml-3 "><img src="Pictures/SERCH.svg" alt="Search"></button> 
+      </div>
+     
     </div>
+   
 
     <!-- Informations principales -->
     <div class="text-center mb-8">
       <h1 class="text-xl font-semibold" id="ville">Beni Mellal, MR</h1>
-      <div class="flex items-center justify-center mt-4">
-        <div class="text-6xl font-bold" id="degP">28°</div>
-        
-      </div>
       
-      <div class=" flex   justify-center gap-10">
-      <div>
-      <h1> Humidity</h1>
-      <p id="Hum"> </p>
-    </div>
-    <div>
-      <h1> Wind</h1>
-      <p id="wd"> </p>
-    </div>
-    </div>
-  </div>
+      <div class="flex items-center justify-center mt-4">
+        <!-- Weather Icon -->
+        <img id="w-icon" class="text-6xl font-bold" src="" alt="Weather Icon">
+        <div class="text-6xl font-bold" id="degP">28°</div>
+      </div>
 
-    <!-- Section Daily -->
+      <div class="flex justify-center gap-10">
+        <div>
+          <h1>Humidity</h1>
+          <p id="Hum"></p>
+        </div>
+        <div>
+          <h1>Wind Speed</h1>
+          <p id="wd"></p>
+        </div>
+      </div>
+    </div>
+
+    <!--  Daily terme -->
     <div>
       <h2 class="text-xl font-semibold mb-4">Daily</h2>
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        <!-- Carte 1 -->
+        <!-- Daily weather cards -->
+
+        <!--Carte 1-->
         <div class="bg-white/10 p-4 rounded-lg text-center">
           <div class="text-2xl">Mon 20</div>
           <div class="text-3xl mt-2">☀️</div>
           <div class="text-xl mt-2">36°</div>
           <div class="text-sm">Mostly sunny</div>
         </div>
-        <!-- Carte 2 -->
-        <div class="bg-white/10 p-4 rounded-lg text-center">
-          <div class="text-2xl">Tue 21</div>
-          <div class="text-3xl mt-2">⛅</div>
-          <div class="text-xl mt-2">30°</div>
-          <div class="text-sm">Partly sunny</div>
-        </div>
-        <!-- Carte 3 -->
-        <div class="bg-white/10 p-4 rounded-lg text-center">
-          <div class="text-2xl">Wed 22</div>
-          <div class="text-3xl mt-2">☁️</div>
-          <div class="text-xl mt-2">25°</div>
-          <div class="text-sm">Cloudy</div>
-        </div>
-        <!-- Carte 4 -->
-        <div class="bg-white/10 p-4 rounded-lg text-center">
-          <div class="text-2xl">Thu 23</div>
-          <div class="text-3xl mt-2">🌧️</div>
-          <div class="text-xl mt-2">15°</div>
-          <div class="text-sm">Cloudy Rain</div>
-        </div>
+      
+
+
+
+
+      <!-- Carte 2 -->
+      <div class="bg-white/10 p-4 rounded-lg text-center">
+        <div class="text-2xl">Tue 21</div>
+        <div class="text-3xl mt-2">⛅</div>
+        <div class="text-xl mt-2">30°</div>
+        <div class="text-sm">Partly sunny</div>
+      </div>
+      <!-- Carte 3 -->
+      <div class="bg-white/10 p-4 rounded-lg text-center">
+        <div class="text-2xl">Wed 22</div>
+        <div class="text-3xl mt-2">☁️</div>
+        <div class="text-xl mt-2">25°</div>
+        <div class="text-sm">Cloudy</div>
+      </div>
+      <!-- Carte 4 -->
+      <div class="bg-white/10 p-4 rounded-lg text-center">
+        <div class="text-2xl">Thu 23</div>
+        <div class="text-3xl mt-2">🌧️</div>
+        <div class="text-xl mt-2">15°</div>
+        <div class="text-sm">Cloudy Rain</div>
       </div>
     </div>
-  </div>
-  <script src="wa.js"> </script>
+
+    <script src="wa.js"></script>
 </body>
+
 </html>
