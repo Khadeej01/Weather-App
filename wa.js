@@ -19,7 +19,7 @@ async function getWeather(city) {
         document.getElementById('ville').innerHTML = data.name;
         document.getElementById('Hum').innerHTML = data.main.humidity + ' %';
         document.getElementById('wd').innerHTML = data.wind.speed + ' km/h';
-      
+       
 
         // Determine which weather icon to show
         const weather = data.weather[0].main;
